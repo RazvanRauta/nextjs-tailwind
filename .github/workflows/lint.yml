@@ -13,8 +13,8 @@ jobs:
         with:
           node-version: '14'
           cache: 'yarn'
-      - run: yarn
-      - run: yarn lint:strict
+      - run: cd frontend && yarn
+      - run: cd frontend && yarn lint:strict
 
   tsc:
     name: Run Type Check
@@ -25,8 +25,8 @@ jobs:
         with:
           node-version: '14'
           cache: 'yarn'
-      - run: yarn
-      - run: yarn tsc
+      - run: cd frontend && yarn
+      - run: cd frontend && yarn tsc
 
   prettier:
     name: Run Prettier Check
@@ -37,5 +37,5 @@ jobs:
         with:
           node-version: '14'
           cache: 'yarn'
-      - run: yarn
-      - run: yarn prettier:check
+      - run: cd frontend && yarn
+      - run: cd frontend && yarn prettier:check
