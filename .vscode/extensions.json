@@ -6,6 +6,8 @@
     "bradlc.vscode-tailwindcss",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "aaron-bond.better-comments"
+    "aaron-bond.better-comments",
+    "ronba.vscode-rive-viewer",
+    "golang.go"
   ]
 }
