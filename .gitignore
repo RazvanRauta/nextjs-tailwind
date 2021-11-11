@@ -36,3 +36,13 @@ yarn-error.log*
 # next-sitemap
 robots.txt
 sitemap.xml
+
+
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+

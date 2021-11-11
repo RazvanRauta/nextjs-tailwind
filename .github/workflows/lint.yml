@@ -1,7 +1,10 @@
 name: PR Source Code Check
 
 on:
-  - pull_request
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   lint:
@@ -42,3 +45,20 @@ jobs:
           cache-dependency-path: frontend/yarn.lock
       - run: cd frontend && yarn
       - run: cd frontend && yarn prettier:check
+
+  
+  server:
+    name: Run Build and Test the Server
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: 1.17
+
+      - name: Build GO Server
+        run: cd server && go build -v ./...
+
+      - name: Test Go Server
+        run: go test -v ./...
+      

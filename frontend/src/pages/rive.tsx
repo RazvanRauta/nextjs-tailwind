@@ -1,13 +1,14 @@
 import * as React from 'react';
-import { useRive, UseRiveParameters } from 'rive-react';
+import { Layout as RiveLayout, useRive, UseRiveParameters } from 'rive-react';
 
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
 export default function RivePage() {
   const loaderParams: UseRiveParameters = {
-    src: '/rive/loader.riv',
+    src: '/rive/basketbal.riv',
     autoplay: true,
+    layout: new RiveLayout({ minX: 500, minY: 500 }),
   };
 
   const { RiveComponent: Loader } = useRive(loaderParams);
