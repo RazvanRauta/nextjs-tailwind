@@ -37,10 +37,20 @@ This starts a local MongoDB on `localhost:27017`.
 The database will be populated with test records
 from the [init-db.js](init-db.js) file.
 
+Install Air
+
+```sh
+curl -sSfL https://raw.githubusercontent.com/cosmtrek/air/master/install.sh | sh -s -- -b $(go env GOPATH)/bin
+```
+
+For less typing, you could add `alias air='$GOPATH/bin/air'` to your `.bashrc` or `.zshrc`.
+
 Navigate to the `server` folder and start the back end:
 
 ```sh
 cd server
+air 
+#if no air :), use:
 go run server.go
 ```
 

@@ -46,3 +46,4 @@ sitemap.xml
 *.test
 *.out
 
+server/tmp

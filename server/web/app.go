@@ -22,7 +22,7 @@ func NewApp(d db.DB, cors bool) App {
 		techHandler = disableCors(techHandler)
 	}
 	app.handlers["/api/technologies"] = techHandler
-	app.handlers["/"] = http.FileServer(http.Dir("/frontend")).ServeHTTP
+	app.handlers["/"] = http.FileServer(http.Dir("../frontend/")).ServeHTTP
 	return app
 }
 

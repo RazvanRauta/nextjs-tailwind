@@ -2,9 +2,9 @@ package web
 
 import (
 	"errors"
+	"my-app/model"
 	"net/http"
 	"net/http/httptest"
-	"my-app/model"
 	"testing"
 )
 
@@ -20,8 +20,8 @@ func (m *MockDb) GetTechnologies() ([]*model.Technology, error) {
 func TestApp_GetTechnologies(t *testing.T) {
 	app := App{d: &MockDb{
 		tech: []*model.Technology{
-			{"Tech1", "Details1"},
-			{"Tech2", "Details2"},
+			{Name: "Tech1", Details: "Details1"},
+			{Name: "Tech2", Details: "Details2"},
 		},
 	}}
 
