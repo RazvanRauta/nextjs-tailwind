@@ -1,5 +1,7 @@
 # my-app
 
+[![GitHub Actions](https://github.com/RazvanRauta/nextjs-tailwind/actions/workflows/lint.yml/badge.svg)](https://github.com/RazvanRauta/nextjs-tailwind/actions/workflows/lint.yml)
+
 ## Environment setup
 
 You need to have [Go](https://golang.org/),
